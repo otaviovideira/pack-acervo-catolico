@@ -30,90 +30,90 @@ export const Route = createFileRoute("/")({
 });
 
 // ─────────────────────────────────────────────────────────────
-// Data
+// Dados
 // ─────────────────────────────────────────────────────────────
 const includes = [
-  { icon: Gamepad2, title: "Juegos Bíblicos", qty: "+20 dinámicas", value: "$19,90" },
-  { icon: HandHeart, title: "Guías de Oración", qty: "+15 guías", value: "$14,90" },
-  { icon: Users, title: "Rompehielos Cristianos", qty: "+18 actividades", value: "$12,90" },
-  { icon: Target, title: "Actividades Dinámicas", qty: "+25 propuestas", value: "$17,90" },
-  { icon: Tent, title: "Dinámicas para Retiros", qty: "+22 materiales", value: "$19,90" },
-  { icon: ClipboardList, title: "Guiones para Encuentros", qty: "+20 guiones", value: "$14,90" },
+  { icon: Gamepad2, title: "Jogos Bíblicos", qty: "+20 dinâmicas", value: "R$59,90" },
+  { icon: HandHeart, title: "Guias de Oração", qty: "+15 guias", value: "R$44,90" },
+  { icon: Users, title: "Quebra-gelos Cristãos", qty: "+18 atividades", value: "R$39,90" },
+  { icon: Target, title: "Atividades Dinâmicas", qty: "+25 propostas", value: "R$54,90" },
+  { icon: Tent, title: "Dinâmicas para Retiros", qty: "+22 materiais", value: "R$59,90" },
+  { icon: ClipboardList, title: "Roteiros para Encontros", qty: "+20 roteiros", value: "R$44,90" },
 ];
 
 const benefits = [
-  "Captar la atención de jóvenes y niños desde el primer minuto",
-  "Encuentros más dinámicos, participativos y memorables",
-  "Enseñar la fe de forma práctica, no sólo teórica",
-  "Hacer que quieran volver la próxima semana",
-  "Sentirte seguro y preparado al guiar cada encuentro",
+  "Prender a atenção de jovens e crianças desde o primeiro minuto",
+  "Encontros mais dinâmicos, participativos e memoráveis",
+  "Ensinar a fé de forma prática, não apenas teórica",
+  "Fazer com que queiram voltar na semana seguinte",
+  "Sentir-se seguro e preparado ao conduzir cada encontro",
 ];
 
 const steps = [
-  { n: "01", title: "Elige el tema", body: "Abre el pack y selecciona el eje del encuentro." },
-  { n: "02", title: "Selecciona los recursos", body: "Toma la dinámica, guía o guion que necesitas." },
-  { n: "03", title: "Aplica en tu encuentro", body: "Imprime, lee y guía. Cero preparación previa." },
-  { n: "04", title: "Observa la participación", body: "Grupos más vivos, semana tras semana." },
+  { n: "01", title: "Escolha o tema", body: "Abra o pack e selecione o eixo do encontro." },
+  { n: "02", title: "Selecione os recursos", body: "Pegue a dinâmica, guia ou roteiro que precisa." },
+  { n: "03", title: "Aplique no seu encontro", body: "Imprima, leia e conduza. Zero preparação prévia." },
+  { n: "04", title: "Veja a participação", body: "Grupos mais vivos, semana após semana." },
 ];
 
 const compatible = [
-  "Catequesis", "Pastoral juvenil", "Retiros espirituales",
-  "Encuentros parroquiales", "Formación cristiana", "Movimientos católicos",
+  "Catequese", "Pastoral juvenil", "Retiros espirituais",
+  "Encontros paroquiais", "Formação cristã", "Movimentos católicos",
 ];
 
 const bonuses = [
-  { title: "Cancionero de Bolsillo", desc: "Cantos católicos organizados por momento litúrgico." },
-  { title: "Manual Antifallas", desc: "Qué hacer cuando el grupo no responde o algo falla." },
-  { title: "Calendario Litúrgico Perpetuo", desc: "Guía visual del año litúrgico completo." },
-  { title: "Código del Compromiso Católico", desc: "Marco espiritual para líderes." },
-  { title: "Arsenal Pastoral 50X", desc: "50 recursos rápidos para reuniones express." },
-  { title: "Kit Catequesis Encantada", desc: "Materiales para niños de 6 a 12 años." },
-  { title: "Matrimonio Firme™", desc: "Retiro breve para parejas de la parroquia." },
+  { title: "Cancioneiro de Bolso", desc: "Cantos católicos organizados por momento litúrgico." },
+  { title: "Manual Antifalhas", desc: "O que fazer quando o grupo não responde ou algo dá errado." },
+  { title: "Calendário Litúrgico Perpétuo", desc: "Guia visual do ano litúrgico completo." },
+  { title: "Código do Compromisso Católico", desc: "Base espiritual para líderes." },
+  { title: "Arsenal Pastoral 50X", desc: "50 recursos rápidos para reuniões express." },
+  { title: "Kit Catequese Encantada", desc: "Materiais para crianças de 6 a 12 anos." },
+  { title: "Matrimônio Firme™", desc: "Retiro breve para casais da paróquia." },
 ];
 
 const testimonials = [
   {
-    name: "María G.",
-    role: "Catequista · México",
-    text: "Antes pasaba horas armando cada encuentro. Ahora abro el pack, elijo la dinámica y listo. Los chicos participan como nunca.",
+    name: "Maria G.",
+    role: "Catequista · São Paulo",
+    text: "Antes eu passava horas montando cada encontro. Agora abro o pack, escolho a dinâmica e pronto. As crianças participam como nunca.",
     img: mariaAvatar,
   },
   {
     name: "Carlos R.",
-    role: "Líder Pastoral · Colombia",
-    text: "Los guiones para encuentros son oro puro. Estructurados, fieles a la doctrina y fáciles de aplicar. Recomendado 100%.",
+    role: "Líder Pastoral · Belo Horizonte",
+    text: "Os roteiros para encontros são ouro puro. Estruturados, fiéis à doutrina e fáceis de aplicar. Recomendo 100%.",
     img: carlosAvatar,
   },
 ];
 
 const faqs = [
   {
-    q: "¿Cómo recibo el material?",
-    a: "Acceso inmediato por e-mail después del pago. Es 100% digital, descargas en menos de 2 minutos y lo guardas para siempre.",
+    q: "Como recebo o material?",
+    a: "Acesso imediato por e-mail após o pagamento. É 100% digital, você baixa em menos de 2 minutos e guarda para sempre.",
   },
   {
-    q: "¿Funciona para mi parroquia o grupo?",
-    a: "Sí. Está en español neutro para toda LATAM y es adaptable a cualquier contexto. Ya lo usan más de 1.655 líderes en +15 países.",
+    q: "Funciona para minha paróquia ou grupo?",
+    a: "Sim. Está em português do Brasil e é adaptável a qualquer contexto. Já é utilizado por mais de 1.655 líderes em +15 países.",
   },
   {
-    q: "No soy muy tecnológico, ¿podré usarlo?",
-    a: "Absolutamente. Son PDFs listos para imprimir. No necesitas programas especiales ni conocimientos técnicos.",
+    q: "Não sou muito tecnológico, vou conseguir usar?",
+    a: "Com certeza. São PDFs prontos para imprimir. Não precisa de programas especiais nem de conhecimentos técnicos.",
   },
   {
-    q: "¿El contenido es doctrinalmente correcto?",
-    a: "Sí. Todos los recursos fueron elaborados siguiendo la doctrina católica y el Magisterio de la Iglesia.",
+    q: "O conteúdo é doutrinalmente correto?",
+    a: "Sim. Todos os recursos foram elaborados seguindo a doutrina católica e o Magistério da Igreja.",
   },
   {
-    q: "¿Y si no me gusta?",
-    a: "Tienes 7 días de garantía incondicional. Escribes un e-mail y te devolvemos el 100% del dinero. Sin preguntas.",
+    q: "E se eu não gostar?",
+    a: "Você tem 7 dias de garantia incondicional. Basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas.",
   },
 ];
 
 const recentBuyers = [
-  { name: "Patricia L.", city: "Guadalajara, MX", mins: 2 },
-  { name: "Pedro M.", city: "Lima, PE", mins: 6 },
-  { name: "Andrés C.", city: "Bogotá, CO", mins: 11 },
-  { name: "Sofía R.", city: "Buenos Aires, AR", mins: 18 },
+  { name: "Patrícia L.", city: "São Paulo, SP", mins: 2 },
+  { name: "Pedro M.", city: "Rio de Janeiro, RJ", mins: 6 },
+  { name: "André C.", city: "Belo Horizonte, MG", mins: 11 },
+  { name: "Sofia R.", city: "Curitiba, PR", mins: 18 },
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -130,7 +130,7 @@ function useCountdown(initialSeconds: number) {
   return { mm, ss };
 }
 
-function CTA({ children = "Quiero acceder al Pack por $9,90" }: { children?: React.ReactNode }) {
+function CTA({ children = "Quero acessar o Pack por R$27,00" }: { children?: React.ReactNode }) {
   return (
     <a
       href="#oferta"
@@ -217,16 +217,16 @@ function Nav() {
         <span className="font-display text-xl">Pastoral 360</span>
       </div>
       <div className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-        <a href="#incluye" className="hover:text-foreground">Incluye</a>
-        <a href="#como-funciona" className="hover:text-foreground">Cómo funciona</a>
-        <a href="#testimonios" className="hover:text-foreground">Testimonios</a>
+        <a href="#incluye" className="hover:text-foreground">Inclui</a>
+        <a href="#como-funciona" className="hover:text-foreground">Como funciona</a>
+        <a href="#testimonios" className="hover:text-foreground">Depoimentos</a>
         <a href="#faq" className="hover:text-foreground">FAQ</a>
       </div>
       <a
         href="#oferta"
         className="rounded-full glass-strong px-4 py-2 text-sm font-medium text-foreground transition hover:brightness-110"
       >
-        Acceder por $9,90
+        Acessar por R$27,00
       </a>
     </header>
 
@@ -239,32 +239,32 @@ function Hero() {
       <div className="max-w-3xl">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--success)]" />
-          +1.655 líderes en 15 países ya lo usan
+          +1.655 líderes em 15 países já utilizam
         </div>
         <h1 className="font-display text-4xl font-extrabold leading-[1.05] text-foreground md:text-5xl">
-          ¿Sin tiempo y sin ideas cada semana?{" "}
-          <span className="italic text-[color:var(--sky)]">Aquí tienes todo listo</span> para tus
-          encuentros, retiros y catequesis.
+          Sem tempo e sem ideias toda semana?{" "}
+          <span className="italic text-[color:var(--sky)]">Aqui está tudo pronto</span> para seus
+          encontros, retiros e catequeses.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Pack con <strong className="text-foreground">+360 recursos católicos digitales</strong> en
-          PDF, listos para imprimir y aplicar. Diseñado para catequistas, líderes y coordinadores
-          pastorales de toda Latinoamérica.
+          Pack com <strong className="text-foreground">+360 recursos católicos digitais</strong> em
+          PDF, prontos para imprimir e aplicar. Feito para catequistas, líderes e coordenadores
+          pastorais de todo o Brasil.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <CTA />
           <div className="text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Mail className="h-4 w-4" /> Acceso inmediato después del pago
+              <Mail className="h-4 w-4" /> Acesso imediato após o pagamento
             </div>
           </div>
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
-          <span>💳 Pago único</span>
+          <span>💳 Pagamento único</span>
           <span>·</span>
-          <span>Acceso vitalicio</span>
+          <span>Acesso vitalício</span>
           <span>·</span>
-          <span>Garantía de 7 días</span>
+          <span>Garantia de 7 dias</span>
         </div>
       </div>
 
@@ -272,45 +272,20 @@ function Hero() {
       <div className="relative mt-14 overflow-hidden rounded-3xl shadow-[var(--shadow-elevated)]">
         <img
           src={heroPack}
-          alt="Vista previa del Pack Pastoral 360 con guías impresas y tableta"
+          alt="Prévia do Pack Pastoral 360 com guias impressas e tablet"
           width={1600}
           height={1024}
           className="h-[380px] w-full object-cover md:h-[520px]"
         />
         <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--success)]" />
-          Vista previa del pack completo
+          Prévia do pack completo
         </div>
         <div className="absolute bottom-4 right-4 hidden items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-foreground shadow md:flex">
-          <Download className="h-4 w-4" /> Entrega por e-mail en minutos
+          <Download className="h-4 w-4" /> Entrega por e-mail em minutos
         </div>
       </div>
     </section>
-  );
-}
-
-function Marquee() {
-  const items = [
-    "+360 recursos",
-    "Español neutro LATAM",
-    "PDF listo para imprimir",
-    "+1.655 líderes activos",
-    "15 países",
-    "Acceso vitalicio",
-    "Doctrinalmente correcto",
-  ];
-  const row = [...items, ...items];
-  return (
-    <div className="border-y border-border bg-secondary/60 py-4 overflow-hidden">
-      <div className="marquee-track flex w-max gap-10 whitespace-nowrap font-display text-2xl text-muted-foreground">
-        {row.map((t, i) => (
-          <span key={i} className="flex items-center gap-10">
-            {t}
-            <span className="text-[color:var(--gold)]">✦</span>
-          </span>
-        ))}
-      </div>
-    </div>
   );
 }
 
@@ -320,11 +295,11 @@ function Benefits() {
       <div className="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            Con este pack vas a poder
+            Com este pack você vai conseguir
           </p>
           <h2 className="font-display text-4xl leading-tight md:text-5xl">
-            Guiar encuentros que los jóvenes{" "}
-            <span className="italic text-[color:var(--sky)]">no quieren perderse</span>.
+            Conduzir encontros que os jovens{" "}
+            <span className="italic text-[color:var(--sky)]">não querem perder</span>.
           </h2>
         </div>
         <ul className="space-y-4">
@@ -352,13 +327,13 @@ function Includes() {
 
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            Qué incluye
+            O que inclui
           </p>
           <h2 className="font-display text-4xl md:text-5xl">
-            6 colecciones. <span className="italic">+360 recursos.</span> Un solo pack.
+            6 coleções. <span className="italic">+360 recursos.</span> Um único pack.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Cada colección es un PDF independiente, listo para imprimir y usar sin preparación previa.
+            Cada coleção é um PDF independente, pronto para imprimir e usar sem preparação prévia.
           </p>
         </div>
 
@@ -373,7 +348,7 @@ function Includes() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <span className="rounded-full bg-[color:var(--success)]/10 px-2.5 py-1 text-xs font-semibold text-[color:var(--success)]">
-                  INCLUIDO
+                  INCLUÍDO
                 </span>
               </div>
               <h3 className="mt-5 font-display text-2xl">{title}</h3>
@@ -390,14 +365,14 @@ function Includes() {
 
         <div className="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-between gap-4 rounded-2xl glass-dark p-6 text-foreground">
           <div>
-            <p className="text-sm opacity-70">Valor total si lo compras por separado</p>
+            <p className="text-sm opacity-70">Valor total se comprar separadamente</p>
             <p className="font-display text-4xl">
-              $99,40 <span className="text-sm opacity-70">USD</span>
+              R$304,40 <span className="text-sm opacity-70">BRL</span>
             </p>
           </div>
           <div className="text-right">
-            <p className="text-sm opacity-70">Hoy pagas una sola vez</p>
-            <p className="font-display text-4xl text-[color:var(--gold)]">$9,90</p>
+            <p className="text-sm opacity-70">Hoje você paga uma única vez</p>
+            <p className="font-display text-4xl text-[color:var(--gold)]">R$27,00</p>
           </div>
         </div>
 
@@ -411,10 +386,10 @@ function HowItWorks() {
     <section id="como-funciona" className="container-narrow py-20 md:py-28">
       <div className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          Cómo funciona
+          Como funciona
         </p>
         <h2 className="font-display text-4xl md:text-5xl">
-          De abrir el pack a guiar el encuentro en <span className="italic">4 pasos</span>.
+          De abrir o pack a conduzir o encontro em <span className="italic">4 passos</span>.
         </h2>
       </div>
       <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -440,13 +415,13 @@ function Compatibility() {
         <div className="grid gap-8 md:grid-cols-[1fr_1.4fr] md:items-center">
           <div>
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-[color:var(--gold)]">
-              100% compatible
+              100% compatível
             </p>
             <h3 className="font-display text-3xl md:text-4xl text-foreground">
-              Funciona en cualquier parroquia o grupo.
+              Funciona em qualquer paróquia ou grupo.
             </h3>
             <p className="mt-3 text-foreground/75">
-              Español neutro, adaptable a la realidad de tu comunidad.
+              Em português do Brasil, adaptável à realidade da sua comunidade.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -470,10 +445,10 @@ function VideoProof() {
     <section className="container-narrow py-16 md:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          Los recursos en acción
+          Os recursos em ação
         </p>
         <h2 className="font-display text-4xl md:text-5xl">
-          Mira cómo se ven <span className="italic">en un encuentro real</span>.
+          Veja como ficam <span className="italic">em um encontro real</span>.
         </h2>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -484,7 +459,7 @@ function VideoProof() {
           >
             <img
               src={src}
-              alt="Recurso pastoral en acción"
+              alt="Recurso pastoral em ação"
               width={900}
               height={1200}
               loading="lazy"
@@ -493,7 +468,7 @@ function VideoProof() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent" />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5 text-white">
               <span className="font-display text-xl">
-                {["Juegos & dinámicas", "Retiros", "Oración"][i]}
+                {["Jogos & dinâmicas", "Retiros", "Oração"][i]}
               </span>
               <div className="grid h-10 w-10 place-items-center rounded-full bg-white text-[color:var(--ink)]">
                 <Play className="h-4 w-4 fill-current" />
@@ -513,23 +488,23 @@ function Problem() {
 
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            Seamos honestos
+            Vamos ser honestos
           </p>
           <h2 className="text-center font-display text-4xl md:text-5xl">
-            ¿Por qué no te ha funcionado <span className="italic">antes</span>?
+            Por que não funcionou para você <span className="italic">antes</span>?
           </h2>
           <div className="mt-10 space-y-4 text-lg text-muted-foreground">
             <p>
-              <strong className="text-foreground">No es falta de esfuerzo.</strong> Es falta de un
-              sistema al que recurrir cuando el domingo se acerca.
+              <strong className="text-foreground">Não é falta de esforço.</strong> É falta de um
+              sistema pronto para recorrer quando o domingo se aproxima.
             </p>
             <p>
-              Sin estructura, todo depende del improviso: buscar ideas en internet, adaptar dinámicas
-              genéricas, imprimir a último momento…
+              Sem estrutura, tudo depende do improviso: buscar ideias na internet, adaptar dinâmicas
+              genéricas, imprimir em cima da hora…
             </p>
             <p>
-              Y eso genera <strong className="text-foreground">frustración</strong>, encuentros
-              tibios y ganas de tirar la toalla.
+              E isso gera <strong className="text-foreground">frustração</strong>, encontros
+              mornos e vontade de jogar a toalha.
             </p>
           </div>
         </div>
@@ -540,21 +515,21 @@ function Problem() {
               Antes
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>· Horas buscando ideas</li>
-              <li>· Grupos distraídos y silenciosos</li>
-              <li>· Miedo al “y ahora qué hago”</li>
-              <li>· Encuentros que no dejan huella</li>
+              <li>· Horas buscando ideias</li>
+              <li>· Grupos distraídos e em silêncio</li>
+              <li>· Medo do “e agora, o que faço?”</li>
+              <li>· Encontros que não deixam marca</li>
             </ul>
           </div>
           <div className="rounded-2xl border border-[color:var(--success)]/30 bg-[color:var(--success)]/5 p-6">
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-[color:var(--success)]">
-              Después
+              Depois
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>✓ Encuentros participativos</li>
-              <li>✓ Preparación en 10 minutos</li>
-              <li>✓ Estructura clara semana a semana</li>
-              <li>✓ Grupos que quieren volver</li>
+              <li>✓ Encontros participativos</li>
+              <li>✓ Preparação em 10 minutos</li>
+              <li>✓ Estrutura clara semana a semana</li>
+              <li>✓ Grupos que querem voltar</li>
             </ul>
           </div>
         </div>
@@ -570,41 +545,41 @@ function Offer() {
       <div className="mx-auto max-w-4xl">
         <div className="overflow-hidden rounded-3xl border-2 border-[color:var(--danger)]/70 bg-card shadow-[var(--shadow-elevated)]">
           <div className="flex flex-wrap items-center justify-between gap-2 bg-[color:var(--gold)] px-6 py-3 text-sm font-semibold text-[color:var(--ink)]">
-            <span>🔥 Precios promocionales solo por hoy</span>
+            <span>🔥 Preços promocionais só por hoje</span>
             <span className="flex items-center gap-2 tabular-nums">
               <Clock className="h-4 w-4" />
-              Termina en {mm}:{ss}
+              Termina em {mm}:{ss}
             </span>
           </div>
 
           <div className="grid gap-10 p-8 md:grid-cols-[1.1fr_1fr] md:p-12">
             <div>
               <h2 className="font-display text-4xl md:text-5xl">
-                Accede al Pack Completo <span className="italic">hoy</span>.
+                Acesse o Pack Completo <span className="italic">hoje</span>.
               </h2>
               <p className="mt-3 text-muted-foreground">
-                Todo el sistema pastoral, en un solo pago. Guárdalo para siempre.
+                Todo o sistema pastoral, em um único pagamento. Guarde para sempre.
               </p>
 
               <div className="mt-6 flex items-end gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Antes</p>
-                  <p className="font-display text-3xl text-muted-foreground line-through">$97</p>
+                  <p className="font-display text-3xl text-muted-foreground line-through">R$297</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Hoy</p>
-                  <p className="font-display text-6xl text-[color:var(--success)]">$9,90</p>
-                  <p className="text-xs text-muted-foreground">USD · pago único · acceso vitalicio</p>
+                  <p className="text-sm text-muted-foreground">Hoje</p>
+                  <p className="font-display text-6xl text-[color:var(--success)]">R$27,00</p>
+                  <p className="text-xs text-muted-foreground">BRL · pagamento único · acesso vitalício</p>
                 </div>
               </div>
 
               <ul className="mt-6 space-y-2 text-foreground">
                 {[
-                  "+360 recursos católicos digitales en PDF",
-                  "Entrega inmediata por e-mail",
-                  "Actualizaciones futuras incluidas",
-                  "Español neutro para toda LATAM",
-                  "Garantía incondicional de 7 días",
+                  "+360 recursos católicos digitais em PDF",
+                  "Entrega imediata por e-mail",
+                  "Atualizações futuras inclusas",
+                  "Português do Brasil",
+                  "Garantia incondicional de 7 dias",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
                     <Check className="mt-1 h-4 w-4 shrink-0 text-[color:var(--success)]" />
@@ -618,21 +593,21 @@ function Offer() {
                   href="#oferta"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-7 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110 md:w-auto"
                 >
-                  <Sparkles className="h-5 w-5" /> Quiero el Pack por $9,90
+                  <Sparkles className="h-5 w-5" /> Quero o Pack por R$27,00
                 </a>
                 <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                   <span>💳 Visa</span>
                   <span>Mastercard</span>
-                  <span>MercadoPago</span>
-                  <span>PayPal</span>
-                  <span>· Conversión automática a tu moneda</span>
+                  <span>Pix</span>
+                  <span>Boleto</span>
+                  <span>· Parcelamento disponível no cartão</span>
                 </div>
               </div>
             </div>
 
             <aside className="rounded-2xl bg-secondary/70 p-6 md:p-8">
               <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[color:var(--danger)]">
-                + 7 bonos incluidos gratis
+                + 7 bônus inclusos grátis
               </p>
               <ul className="space-y-3">
                 {bonuses.map((b) => (
@@ -667,12 +642,12 @@ function Social() {
             ))}
           </div>
           <h2 className="font-display text-4xl md:text-5xl">
-            Cientos de líderes parroquiales <span className="italic">ya lo usan</span>.
+            Centenas de líderes paroquiais <span className="italic">já usam</span>.
           </h2>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span><strong className="text-foreground">+1.655</strong> líderes activos</span>
+            <span><strong className="text-foreground">+1.655</strong> líderes ativos</span>
             <span><strong className="text-foreground">+15</strong> países</span>
-            <span><strong className="text-foreground">4,9/5</strong> valoración media</span>
+            <span><strong className="text-foreground">4,9/5</strong> avaliação média</span>
           </div>
         </div>
 
@@ -717,20 +692,20 @@ function Guarantee() {
         <div className="grid h-32 w-32 place-items-center rounded-full bg-[color:var(--gold)] text-[color:var(--ink)] shadow-[var(--shadow-elevated)]">
           <div className="text-center">
             <Shield className="mx-auto h-7 w-7" />
-            <p className="mt-1 font-display text-2xl leading-none">7 días</p>
-            <p className="text-[10px] font-semibold uppercase tracking-widest">Garantía</p>
+            <p className="mt-1 font-display text-2xl leading-none">7 dias</p>
+            <p className="text-[10px] font-semibold uppercase tracking-widest">Garantia</p>
           </div>
         </div>
         <div>
           <h3 className="font-display text-3xl md:text-4xl">
-            Garantía 100% sin riesgo.
+            Garantia 100% sem risco.
           </h3>
           <p className="mt-3 text-muted-foreground">
-            Si en 7 días sientes que no es para ti, escribes un e-mail y te devolvemos el 100% del
-            dinero. Sin preguntas. Sin complicaciones.
+            Se em 7 dias sentir que não é para você, basta enviar um e-mail e devolvemos 100% do
+            valor. Sem perguntas. Sem complicação.
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
-            🔒 Pago seguro · Compra protegida por certificado SSL
+            🔒 Pagamento seguro · Compra protegida por certificado SSL
           </p>
         </div>
       </div>
@@ -743,10 +718,10 @@ function FAQ() {
     <section id="faq" className="container-narrow py-20 md:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-          Preguntas frecuentes
+          Perguntas frequentes
         </p>
         <h2 className="font-display text-4xl md:text-5xl">
-          Todo lo que quieres <span className="italic">saber antes</span>.
+          Tudo o que você quer <span className="italic">saber antes</span>.
         </h2>
       </div>
       <div className="mx-auto mt-10 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
@@ -782,21 +757,21 @@ function FinalCTA() {
     <section className="container-narrow pb-24">
       <div className="mx-auto max-w-3xl overflow-hidden rounded-3xl glass-dark p-10 text-center text-foreground md:p-16">
         <h2 className="font-display text-4xl md:text-6xl">
-          Empieza el próximo encuentro <span className="italic text-[color:var(--gold)]">listo</span>.
+          Comece o próximo encontro <span className="italic text-[color:var(--gold)]">pronto</span>.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-foreground/70">
-          Un solo pago de $9,90 USD y todo el sistema es tuyo, para siempre.
+          Um único pagamento de R$27,00 e todo o sistema é seu, para sempre.
         </p>
         <div className="mt-8">
           <a
             href="#oferta"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110"
           >
-            <Sparkles className="h-5 w-5" /> Acceder por $9,90
+            <Sparkles className="h-5 w-5" /> Acessar por R$27,00
           </a>
         </div>
         <p className="mt-4 text-xs text-foreground/60">
-          Garantía de 7 días · Acceso instantáneo · Pago único
+          Garantia de 7 dias · Acesso instantâneo · Pagamento único
         </p>
       </div>
 
@@ -809,11 +784,11 @@ function Footer() {
     <footer className="border-t border-border">
       <div className="container-narrow py-10 text-xs text-muted-foreground">
         <p className="mx-auto max-w-3xl text-center">
-          Este sitio no forma parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO
-          está avalado por Facebook. FACEBOOK es una marca registrada de FACEBOOK, Inc. Los
-          resultados pueden variar según el compromiso y aplicación de cada líder.
+          Este site não faz parte do site do Facebook nem da Facebook Inc. Além disso, este site NÃO
+          é endossado pelo Facebook. FACEBOOK é uma marca registrada da FACEBOOK, Inc. Os
+          resultados podem variar conforme o comprometimento e a aplicação de cada líder.
         </p>
-        <p className="mt-6 text-center">© {new Date().getFullYear()} Pack Pastoral 360. Todos los derechos reservados.</p>
+        <p className="mt-6 text-center">© {new Date().getFullYear()} Pack Pastoral 360. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
@@ -853,7 +828,7 @@ function SalesPopup() {
         <p className="font-semibold text-foreground">{b.name}</p>
         <p className="text-muted-foreground">{b.city}</p>
         <p className="mt-1 text-xs text-muted-foreground">
-          Acaba de comprar · hace {b.mins} min
+          Acabou de comprar · há {b.mins} min
         </p>
       </div>
     </div>
