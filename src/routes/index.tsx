@@ -4,6 +4,7 @@ import {
   Check,
   Star,
   Shield,
+  ShieldCheck,
   Clock,
   Mail,
   Download,
@@ -564,7 +565,7 @@ function Offer() {
               <div className="mt-6 flex items-end gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Antes</p>
-                  <p className="font-display text-3xl text-muted-foreground line-through">R$297</p>
+                  <p className="font-display text-3xl text-muted-foreground line-through">R$97</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Hoje</p>
@@ -590,7 +591,9 @@ function Offer() {
 
               <div className="mt-8">
                 <a
-                  href="#oferta"
+                  href="https://pay.cakto.com.br/rh7p47q_954233"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-7 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110 md:w-auto"
                 >
                   <Sparkles className="h-5 w-5" /> Quero o Pack por R$27,00
@@ -689,11 +692,25 @@ function Guarantee() {
   return (
     <section className="container-narrow py-20 md:py-24">
       <div className="mx-auto grid max-w-4xl items-center gap-8 rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] md:grid-cols-[auto_1fr] md:p-12">
-        <div className="grid h-32 w-32 place-items-center rounded-full bg-[color:var(--gold)] text-[color:var(--ink)] shadow-[var(--shadow-elevated)]">
-          <div className="text-center">
-            <Shield className="mx-auto h-7 w-7" />
-            <p className="mt-1 font-display text-2xl leading-none">7 dias</p>
-            <p className="text-[10px] font-semibold uppercase tracking-widest">Garantia</p>
+        <div className="relative mx-auto h-40 w-40 shrink-0">
+          <div className="absolute inset-0 animate-pulse rounded-full bg-[color:var(--gold)]/30 blur-2xl" />
+          <div
+            className="relative grid h-40 w-40 place-items-center rounded-full text-[color:var(--ink)] shadow-[var(--shadow-elevated)]"
+            style={{
+              background:
+                "conic-gradient(from 210deg, #f5c451, #fff2c9, #f5c451, #d99a2b, #f5c451)",
+            }}
+          >
+            <div className="grid h-32 w-32 place-items-center rounded-full bg-gradient-to-b from-[color:var(--gold)] to-[#e0a83a] ring-4 ring-white/40">
+              <div className="text-center">
+                <ShieldCheck className="mx-auto h-8 w-8 drop-shadow" strokeWidth={2.5} />
+                <p className="mt-1 font-display text-3xl leading-none tracking-tight">7</p>
+                <p className="-mt-0.5 text-[10px] font-bold uppercase tracking-[0.18em]">Dias</p>
+                <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.22em] opacity-80">
+                  Garantia
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div>
@@ -764,7 +781,9 @@ function FinalCTA() {
         </p>
         <div className="mt-8">
           <a
-            href="#oferta"
+            href="https://pay.cakto.com.br/rh7p47q_954233"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110"
           >
             <Sparkles className="h-5 w-5" /> Acessar por R$27,00
