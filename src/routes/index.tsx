@@ -19,7 +19,7 @@ import {
   Play,
 } from "lucide-react";
 
-import heroPack from "@/assets/hero-pack.jpg";
+import heroPack from "@/assets/preview-pack-completo.png.asset.json";
 import cardYouth from "@/assets/card-youth.jpg";
 import cardPrayer from "@/assets/card-prayer.jpg";
 import cardRetreat from "@/assets/card-retreat.jpg";
@@ -272,8 +272,8 @@ function Hero() {
       {/* Hero image card */}
       <div className="relative mt-14 overflow-hidden rounded-3xl shadow-[var(--shadow-elevated)]">
         <img
-          src={heroPack}
-          alt="Prévia do Pack Pastoral 360 com guias impressas e tablet"
+          src={heroPack.url}
+          alt="Prévia do Pack Acervo Católico Premium com livros e tablet"
           width={1600}
           height={1024}
           className="h-[380px] w-full object-cover md:h-[520px]"
