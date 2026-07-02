@@ -19,7 +19,7 @@ import {
   Play,
 } from "lucide-react";
 
-import heroPack from "@/assets/hero-pack.jpg";
+import heroPack from "@/assets/preview-pack-completo.png.asset.json";
 import cardYouth from "@/assets/card-youth.jpg";
 import cardPrayer from "@/assets/card-prayer.jpg";
 import cardRetreat from "@/assets/card-retreat.jpg";
