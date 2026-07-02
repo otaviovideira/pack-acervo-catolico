@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pack Pastoral Católica 360 — +360 recursos listos para tus encuentros" },
+      { title: "Pack Pastoral Católica 360 — +360 recursos prontos para seus encontros" },
       {
         name: "description",
         content:
-          "Guías, dinámicas, juegos bíblicos y guiones listos para imprimir. Acceso vitalicio por $9,90 USD con garantía de 7 días.",
+          "Guias, dinâmicas, jogos bíblicos e roteiros prontos para imprimir. Acesso vitalício por R$27,00 com garantia de 7 dias.",
       },
       { name: "author", content: "Pack Pastoral 360" },
       { property: "og:title", content: "Pack Pastoral Católica 360" },
       {
         property: "og:description",
         content:
-          "+360 recursos católicos digitales listos para catequesis, retiros y encuentros parroquiales.",
+          "+360 recursos católicos digitais prontos para catequese, retiros e encontros paroquiais.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -113,7 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
