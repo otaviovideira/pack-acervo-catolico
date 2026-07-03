@@ -562,21 +562,21 @@ function Offer() {
                 Todo o sistema pastoral, em um único pagamento. Guarde para sempre.
               </p>
 
-              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5 text-center md:text-left">
                 <div className="mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Valor total separado</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Valor total se comprar separadamente</p>
                   <p className="font-display text-2xl text-white/40 line-through decoration-white/30">R$ 304,40 <span className="text-sm font-medium text-white/30">BRL</span></p>
                 </div>
 
-                <div className="mb-4 flex w-full items-center gap-3">
-                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
+                <div className="mb-4 flex w-full items-center justify-center gap-3 md:justify-start">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20 md:w-20"></div>
                   <div className="h-1.5 w-1.5 rounded-full bg-[color:var(--gold)] shadow-[0_0_10px_var(--gold)]"></div>
-                  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
+                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20 md:w-20"></div>
                 </div>
 
                 <div>
                   <p className="text-sm font-semibold text-[color:var(--gold)]">Hoje você paga uma única vez</p>
-                  <div className="flex items-start gap-1">
+                  <div className="flex items-start justify-center gap-1 md:justify-start">
                     <span className="mt-2 font-display text-2xl font-bold text-[color:var(--gold)]">R$</span>
                     <span className="font-display text-6xl font-extrabold tracking-tight text-[color:var(--gold)] drop-shadow-[0_2px_12px_rgba(245,196,81,0.35)]">27,00</span>
                   </div>
