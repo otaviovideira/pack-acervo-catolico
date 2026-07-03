@@ -553,24 +553,34 @@ function Offer() {
             </span>
           </div>
 
-          <div className="grid gap-10 p-8 md:grid-cols-[1.1fr_1fr] md:p-12">
+          <div className="grid gap-8 bg-gradient-to-b from-[rgba(20,14,10,0.55)] via-[rgba(20,14,10,0.72)] to-[rgba(20,14,10,0.85)] p-6 md:grid-cols-[1.1fr_1fr] md:p-12">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl">
-                Acesse o Pack Completo <span className="italic">hoje</span>.
+              <h2 className="font-display text-3xl md:text-5xl">
+                Acesse o Pack Completo <span className="italic text-[color:var(--gold)]">hoje</span>.
               </h2>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-foreground/80">
                 Todo o sistema pastoral, em um único pagamento. Guarde para sempre.
               </p>
 
-              <div className="mt-6 flex items-end gap-4">
-                <div>
-                  <p className="text-sm text-muted-foreground">Antes</p>
-                  <p className="font-display text-3xl text-muted-foreground line-through">R$97</p>
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="mb-4">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-white/60">Valor total separado</p>
+                  <p className="font-display text-2xl text-white/40 line-through decoration-white/30">R$ 304,40 <span className="text-sm font-medium text-white/30">BRL</span></p>
                 </div>
+
+                <div className="mb-4 flex w-full items-center gap-3">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
+                  <div className="h-1.5 w-1.5 rounded-full bg-[color:var(--gold)] shadow-[0_0_10px_var(--gold)]"></div>
+                  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
+                </div>
+
                 <div>
-                  <p className="text-sm text-muted-foreground">Hoje</p>
-                  <p className="font-display text-6xl text-[color:var(--success)]">R$27,00</p>
-                  <p className="text-xs text-muted-foreground">BRL · pagamento único · acesso vitalício</p>
+                  <p className="text-sm font-semibold text-[color:var(--gold)]">Hoje você paga uma única vez</p>
+                  <div className="flex items-start gap-1">
+                    <span className="mt-2 font-display text-2xl font-bold text-[color:var(--gold)]">R$</span>
+                    <span className="font-display text-6xl font-extrabold tracking-tight text-[color:var(--gold)] drop-shadow-[0_2px_12px_rgba(245,196,81,0.35)]">27,00</span>
+                  </div>
+                  <p className="text-xs text-white/50">pagamento único · acesso vitalício</p>
                 </div>
               </div>
 
@@ -583,7 +593,7 @@ function Offer() {
                   "Garantia incondicional de 7 dias",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-[color:var(--success)]" />
+                    <Check className="mt-1 h-4 w-4 shrink-0 text-[color:var(--gold)]" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -594,22 +604,22 @@ function Offer() {
                   href="https://pay.cakto.com.br/rh7p47q_954233"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-7 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110 md:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-4 text-lg font-bold text-[color:var(--ink)] shadow-[0_10px_30px_-10px_rgba(245,196,81,0.5)] transition hover:brightness-110 md:w-auto"
                 >
                   <Sparkles className="h-5 w-5" /> Quero o Pack por R$27,00
                 </a>
-                <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-white/60">
                   <span>💳 Visa</span>
                   <span>Mastercard</span>
                   <span>Pix</span>
                   <span>Boleto</span>
-                  <span>· Parcelamento disponível no cartão</span>
+                  <span>· Parcelamento no cartão</span>
                 </div>
               </div>
             </div>
 
-            <aside className="rounded-2xl bg-secondary/70 p-6 md:p-8">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[color:var(--danger)]">
+            <aside className="rounded-2xl border border-white/10 bg-white/5 p-5 md:p-8">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[color:var(--gold)]">
                 + 7 bônus inclusos grátis
               </p>
               <ul className="space-y-3">
@@ -620,7 +630,7 @@ function Offer() {
                     </span>
                     <div>
                       <p className="font-semibold text-foreground">{b.title}</p>
-                      <p className="text-sm text-muted-foreground">{b.desc}</p>
+                      <p className="text-sm text-white/60">{b.desc}</p>
                     </div>
                   </li>
                 ))}
