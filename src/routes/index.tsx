@@ -215,7 +215,7 @@ function Nav() {
         <div className="grid h-8 w-8 place-items-center rounded-full bg-white/95 text-[color:var(--ink)]">
           <span className="font-display text-lg leading-none">✦</span>
         </div>
-        <span className="font-display text-xl">Pastoral 360</span>
+        <span className="font-display text-xl">Acervo Católico</span>
       </div>
       <div className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
         <a href="#incluye" className="hover:text-foreground">Inclui</a>
@@ -807,7 +807,7 @@ function Footer() {
           é endossado pelo Facebook. FACEBOOK é uma marca registrada da FACEBOOK, Inc. Os
           resultados podem variar conforme o comprometimento e a aplicação de cada líder.
         </p>
-        <p className="mt-6 text-center">© {new Date().getFullYear()} Pack Pastoral 360. Todos os direitos reservados.</p>
+        <p className="mt-6 text-center">© {new Date().getFullYear()} Pack Acervo Católico. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

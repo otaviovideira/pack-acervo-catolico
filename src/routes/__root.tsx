@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pack Pastoral Católica 360 — +360 recursos prontos para seus encontros" },
+      { title: "Pack Acervo Católico — +360 recursos prontos para seus encontros" },
       {
         name: "description",
         content:
           "Guias, dinâmicas, jogos bíblicos e roteiros prontos para imprimir. Acesso vitalício por R$27,00 com garantia de 7 dias.",
       },
-      { name: "author", content: "Pack Pastoral 360" },
-      { property: "og:title", content: "Pack Pastoral Católica 360" },
+      { name: "author", content: "Pack Acervo Católico" },
+      { property: "og:title", content: "Pack Acervo Católico" },
       {
         property: "og:description",
         content:
