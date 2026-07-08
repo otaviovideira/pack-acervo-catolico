@@ -270,13 +270,13 @@ function Hero() {
       </div>
 
       {/* Hero image card */}
-      <div className="relative mt-14 overflow-hidden rounded-3xl shadow-[var(--shadow-elevated)]">
+      <div className="relative mt-14 aspect-[1558/1009] overflow-hidden rounded-3xl shadow-[var(--shadow-elevated)]">
         <img
           src={heroPack.url}
           alt="Prévia do Pack Acervo Católico Premium com livros e tablet"
-          width={1600}
-          height={1024}
-          className="h-[380px] w-full object-cover md:h-[520px]"
+          width={1558}
+          height={1009}
+          className="h-full w-full object-cover"
         />
         <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--success)]" />
