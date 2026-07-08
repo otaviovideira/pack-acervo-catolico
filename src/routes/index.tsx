@@ -17,6 +17,7 @@ import {
   ClipboardList,
   ChevronDown,
   Play,
+  X,
 } from "lucide-react";
 
 import heroPack from "@/assets/preview-pack-completo.png.asset.json";
@@ -201,6 +202,7 @@ function LandingPage() {
       <Reveal><FAQ /></Reveal>
       <Reveal><FinalCTA /></Reveal>
       <Footer />
+      <ExitIntentPopup />
     </div>
   );
 }
