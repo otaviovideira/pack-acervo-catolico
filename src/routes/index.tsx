@@ -17,6 +17,7 @@ import {
   ClipboardList,
   ChevronDown,
   Play,
+  X,
 } from "lucide-react";
 
 import heroPack from "@/assets/preview-pack-completo.png.asset.json";
@@ -201,6 +202,7 @@ function LandingPage() {
       <Reveal><FAQ /></Reveal>
       <Reveal><FinalCTA /></Reveal>
       <Footer />
+      <ExitIntentPopup />
     </div>
   );
 }
@@ -858,6 +860,141 @@ function SalesPopup() {
         <p className="text-muted-foreground">{b.city}</p>
         <p className="mt-1 text-xs text-muted-foreground">
           Acabou de comprar · há {b.mins} min
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Exit Intent Popup — Downsell R$19,90
+// ─────────────────────────────────────────────────────────────
+function ExitIntentPopup() {
+  const [open, setOpen] = useState(false);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (sessionStorage.getItem("exit_popup_shown") === "1") {
+      setShown(true);
+      return;
+    }
+
+    const trigger = () => {
+      if (shown) return;
+      setShown(true);
+      setOpen(true);
+      sessionStorage.setItem("exit_popup_shown", "1");
+    };
+
+    const onMouseOut = (e: MouseEvent) => {
+      if (e.clientY <= 0 && !e.relatedTarget) trigger();
+    };
+
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    let mobileTimer: number | undefined;
+    let lastScroll = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (lastScroll - y > 40 && y < 200) trigger();
+      lastScroll = y;
+    };
+
+    document.addEventListener("mouseout", onMouseOut);
+    if (isMobile) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      mobileTimer = window.setTimeout(trigger, 45000);
+    }
+
+    return () => {
+      document.removeEventListener("mouseout", onMouseOut);
+      window.removeEventListener("scroll", onScroll);
+      if (mobileTimer) window.clearTimeout(mobileTimer);
+    };
+  }, [shown]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-in fade-in"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="exit-popup-title"
+    >
+      <button
+        aria-label="Fechar"
+        onClick={() => setOpen(false)}
+        className="absolute inset-0 bg-black/75 backdrop-blur-sm"
+      />
+      <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[color:var(--gold)]/40 bg-gradient-to-b from-[rgba(20,14,10,0.98)] to-[rgba(10,7,5,0.98)] p-6 shadow-2xl md:p-8">
+        <button
+          onClick={() => setOpen(false)}
+          aria-label="Fechar"
+          className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full bg-white/10 text-white/80 transition hover:bg-white/20"
+        >
+          <X className="h-4 w-4" />
+        </button>
+
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/50 bg-[color:var(--gold)]/10 px-3 py-1 text-xs font-semibold text-[color:var(--gold)]">
+          <Sparkles className="h-3.5 w-3.5" /> ESPERE! Oferta única nesta página
+        </div>
+
+        <h2
+          id="exit-popup-title"
+          className="font-display text-3xl font-extrabold leading-tight text-white md:text-4xl"
+        >
+          Antes de sair… leve o Pack completo por{" "}
+          <span className="text-[color:var(--gold)] drop-shadow-[0_2px_12px_rgba(245,196,81,0.35)]">
+            R$19,90
+          </span>
+        </h2>
+
+        <p className="mt-4 text-base leading-relaxed text-white/80">
+          Sabemos que o valor faz diferença. Por isso, só agora,{" "}
+          <strong className="text-white">liberamos o mesmo Pack com +360 recursos católicos</strong>{" "}
+          — jogos bíblicos, guias de oração, dinâmicas para retiros e encontros — por menos que um
+          lanche.
+        </p>
+
+        <ul className="mt-5 space-y-2 text-sm text-white/85">
+          {[
+            "Acesso imediato após o pagamento",
+            "Mesmo conteúdo completo, sem cortes",
+            "Vitalício — pague uma vez, use para sempre",
+            "Garantia incondicional de 7 dias",
+          ].map((t) => (
+            <li key={t} className="flex items-start gap-2">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--gold)]" />
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex items-baseline justify-center gap-3">
+          <span className="text-sm text-white/50 line-through">De R$27,00</span>
+          <span className="font-display text-5xl font-extrabold text-[color:var(--gold)] drop-shadow-[0_2px_16px_rgba(245,196,81,0.45)]">
+            R$19,90
+          </span>
+        </div>
+
+        <a
+          href="https://pay.cakto.com.br/akpp5t6"
+          onClick={() => setOpen(false)}
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-6 py-4 text-base font-bold text-[color:var(--ink)] shadow-[0_10px_40px_-10px_rgba(245,196,81,0.6)] transition hover:brightness-110"
+        >
+          <Sparkles className="h-5 w-5" /> Sim, quero garantir por R$19,90
+        </a>
+
+        <button
+          onClick={() => setOpen(false)}
+          className="mt-3 w-full text-center text-xs text-white/50 underline-offset-2 hover:text-white/80 hover:underline"
+        >
+          Não, prefiro perder esta oferta
+        </button>
+
+        <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-white/50">
+          <ShieldCheck className="h-3.5 w-3.5" /> Pagamento seguro · 7 dias de garantia
         </p>
       </div>
     </div>
