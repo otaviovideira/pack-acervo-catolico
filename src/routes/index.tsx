@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import heroPack from "@/assets/preview-pack-completo.png.asset.json";
+import exitPopupImage from "@/assets/pack-completo-mockup.png.asset.json";
 import cardYouth from "@/assets/card-youth.jpg";
 import cardPrayer from "@/assets/card-prayer.jpg";
 import cardRetreat from "@/assets/card-retreat.jpg";
@@ -939,6 +940,13 @@ function ExitIntentPopup() {
         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/50 bg-[color:var(--gold)]/10 px-3 py-1 text-xs font-semibold text-[color:var(--gold)]">
           <Sparkles className="h-3.5 w-3.5" /> ESPERE! Oferta única nesta página
         </div>
+
+        <img
+          src={exitPopupImage.url}
+          alt="Pack completo com +360 recursos católicos"
+          className="mt-4 w-full rounded-2xl border border-[color:var(--gold)]/20 shadow-lg"
+          loading="lazy"
+        />
 
         <h2
           id="exit-popup-title"
