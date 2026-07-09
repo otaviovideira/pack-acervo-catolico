@@ -30,6 +30,16 @@ import carlosAvatar from "@/assets/testimonial-carlos.jpg";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
+  head: () => ({
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroPack.url,
+        fetchpriority: "high",
+      },
+    ],
+  }),
 });
 
 // ─────────────────────────────────────────────────────────────
@@ -204,6 +214,7 @@ function LandingPage() {
       <Reveal><FinalCTA /></Reveal>
       <Footer />
       <ExitIntentPopup />
+      <UpsellPopup />
     </div>
   );
 }
@@ -279,6 +290,9 @@ function Hero() {
           alt="Prévia do Pack Acervo Católico Premium com livros e tablet"
           width={1558}
           height={1009}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur">
