@@ -380,14 +380,14 @@ function Includes() {
           ))}
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-between gap-4 rounded-2xl glass-dark p-6 text-foreground">
+        <div className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-5 rounded-2xl glass-dark p-6 text-center text-foreground md:flex-row md:items-center md:justify-between md:gap-4 md:text-left">
           <div>
             <p className="text-sm opacity-70">Valor total se comprar separadamente</p>
             <p className="font-display text-4xl">
               R$304,40 <span className="text-sm opacity-70">BRL</span>
             </p>
           </div>
-          <div className="text-right">
+          <div>
             <p className="text-sm opacity-70">Hoje você paga uma única vez</p>
             <p className="font-display text-4xl text-[color:var(--gold)]">R$27,00</p>
           </div>
