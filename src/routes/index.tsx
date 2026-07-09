@@ -30,6 +30,16 @@ import carlosAvatar from "@/assets/testimonial-carlos.jpg";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
+  head: () => ({
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroPack.url,
+        fetchpriority: "high",
+      },
+    ],
+  }),
 });
 
 // ─────────────────────────────────────────────────────────────
@@ -204,6 +214,7 @@ function LandingPage() {
       <Reveal><FinalCTA /></Reveal>
       <Footer />
       <ExitIntentPopup />
+      <UpsellPopup />
     </div>
   );
 }
@@ -279,6 +290,9 @@ function Hero() {
           alt="Prévia do Pack Acervo Católico Premium com livros e tablet"
           width={1558}
           height={1009}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur">
@@ -605,8 +619,10 @@ function Offer() {
               <div className="mt-8">
                 <a
                   href="https://pay.cakto.com.br/rh7p47q_954233"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event("open-upsell"));
+                  }}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-4 text-lg font-bold text-[color:var(--ink)] shadow-[0_10px_30px_-10px_rgba(245,196,81,0.5)] transition hover:brightness-110 md:w-auto"
                 >
                   <Sparkles className="h-5 w-5" /> Quero o Pack por R$27,00
@@ -795,8 +811,10 @@ function FinalCTA() {
         <div className="mt-8">
           <a
             href="https://pay.cakto.com.br/rh7p47q_954233"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event("open-upsell"));
+            }}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110"
           >
             <Sparkles className="h-5 w-5" /> Acessar por R$27,00
@@ -1000,6 +1018,135 @@ function ExitIntentPopup() {
         >
           Não, prefiro perder esta oferta
         </button>
+
+        <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-white/50">
+          <ShieldCheck className="h-3.5 w-3.5" /> Pagamento seguro · 7 dias de garantia
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Upsell Popup — Upgrade R$37 com bônus extras
+// ─────────────────────────────────────────────────────────────
+const UPSELL_URL = "https://pay.cakto.com.br/q9g6cod";
+const ORIGINAL_URL = "https://pay.cakto.com.br/rh7p47q_954233";
+
+const upsellBonuses = [
+  {
+    title: "30 Marcadores de Página para Bíblia",
+    desc: "Designs exclusivos, prontos para imprimir e presentear.",
+  },
+  {
+    title: "Kit de Materiais Imprimíveis para Encontros",
+    desc: "Certificados, listas de presença, crachás e muito mais.",
+  },
+  {
+    title: "Playlist Premium de Louvores Católicos",
+    desc: "+200 músicas selecionadas para animar cada momento.",
+  },
+];
+
+function UpsellPopup() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setOpen(true);
+    window.addEventListener("open-upsell", handler);
+    return () => window.removeEventListener("open-upsell", handler);
+  }, []);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[110] flex items-center justify-center p-4 animate-in fade-in"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="upsell-popup-title"
+    >
+      <button
+        aria-label="Fechar"
+        onClick={() => setOpen(false)}
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+      />
+      <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border-2 border-[color:var(--gold)]/60 bg-gradient-to-b from-[rgba(20,14,10,0.98)] to-[rgba(10,7,5,0.98)] p-6 shadow-2xl md:p-8">
+        <button
+          onClick={() => setOpen(false)}
+          aria-label="Fechar"
+          className="absolute right-4 top-4 grid h-8 w-8 place-items-center rounded-full bg-white/10 text-white/80 transition hover:bg-white/20"
+        >
+          <X className="h-4 w-4" />
+        </button>
+
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/60 bg-[color:var(--gold)]/15 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[color:var(--gold)]">
+          <Sparkles className="h-3.5 w-3.5" /> Upgrade exclusivo
+        </div>
+
+        <h2
+          id="upsell-popup-title"
+          className="font-display text-2xl font-extrabold leading-tight text-white md:text-3xl"
+        >
+          Antes de finalizar… quer{" "}
+          <span className="text-[color:var(--gold)] drop-shadow-[0_2px_12px_rgba(245,196,81,0.4)]">
+            turbinar seu pack
+          </span>{" "}
+          por apenas R$10 a mais?
+        </h2>
+
+        <p className="mt-3 text-sm leading-relaxed text-white/80 md:text-base">
+          Adicione agora <strong className="text-white">3 bônus premium</strong> que valem
+          muito mais que o valor do upgrade — só disponíveis nesta página, uma única vez.
+        </p>
+
+        <div className="mt-5 space-y-3">
+          {upsellBonuses.map((b) => (
+            <div
+              key={b.title}
+              className="flex gap-3 rounded-2xl border border-[color:var(--gold)]/25 bg-white/5 p-3"
+            >
+              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[color:var(--gold)] text-xs font-bold text-[color:var(--ink)]">
+                ✦
+              </span>
+              <div>
+                <p className="text-sm font-bold text-white md:text-base">{b.title}</p>
+                <p className="text-xs text-white/65 md:text-sm">{b.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-[color:var(--gold)]/40 bg-gradient-to-b from-[color:var(--gold)]/15 to-transparent p-4 text-center">
+          <p className="text-xs uppercase tracking-widest text-white/60">
+            Pack Completo + 3 Bônus Premium
+          </p>
+          <div className="mt-1 flex items-baseline justify-center gap-2">
+            <span className="text-sm text-white/50 line-through">R$27,00</span>
+            <span className="font-display text-5xl font-extrabold text-[color:var(--gold)] drop-shadow-[0_2px_16px_rgba(245,196,81,0.45)]">
+              R$37,00
+            </span>
+          </div>
+          <p className="mt-1 text-xs text-white/60">
+            pagamento único · acesso vitalício
+          </p>
+        </div>
+
+        <a
+          href={UPSELL_URL}
+          onClick={() => setOpen(false)}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-6 py-4 text-base font-bold text-[color:var(--ink)] shadow-[0_10px_40px_-10px_rgba(245,196,81,0.7)] transition hover:brightness-110"
+        >
+          <Sparkles className="h-5 w-5" /> Sim! Quero o upgrade por R$37,00
+        </a>
+
+        <a
+          href={ORIGINAL_URL}
+          onClick={() => setOpen(false)}
+          className="mt-3 block w-full text-center text-xs text-white/50 underline underline-offset-2 transition hover:text-white/80"
+        >
+          Não, prefiro seguir apenas com o Pack por R$27,00
+        </a>
 
         <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-white/50">
           <ShieldCheck className="h-3.5 w-3.5" /> Pagamento seguro · 7 dias de garantia
