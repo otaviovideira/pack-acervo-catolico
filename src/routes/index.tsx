@@ -75,7 +75,6 @@ const compatible = [
 ];
 
 const bonuses = [
-  { title: "Cancioneiro de Bolso", desc: "Cantos católicos organizados por momento litúrgico." },
   { title: "Manual Antifalhas", desc: "O que fazer quando o grupo não responde ou algo dá errado." },
   { title: "Calendário Litúrgico Perpétuo", desc: "Guia visual do ano litúrgico completo." },
   { title: "Código do Compromisso Católico", desc: "Base espiritual para líderes." },
@@ -639,7 +638,7 @@ function Offer() {
 
             <aside className="rounded-2xl border border-white/10 bg-white/5 p-5 md:p-8">
               <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-[color:var(--gold)]">
-                + 7 bônus inclusos grátis
+                + 6 bônus inclusos grátis
               </p>
               <ul className="space-y-3">
                 {bonuses.map((b) => (
