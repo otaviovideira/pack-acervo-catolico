@@ -298,7 +298,7 @@ function Hero() {
           <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--success)]" />
           Prévia do pack completo
         </div>
-        <div className="absolute bottom-4 right-4 hidden items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-foreground shadow md:flex">
+        <div className="absolute bottom-4 right-4 hidden items-center gap-2 rounded-full bg-black/70 px-4 py-2 text-sm font-medium text-white shadow backdrop-blur md:flex">
           <Download className="h-4 w-4" /> Entrega por e-mail em minutos
         </div>
       </div>
