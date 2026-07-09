@@ -619,8 +619,10 @@ function Offer() {
               <div className="mt-8">
                 <a
                   href="https://pay.cakto.com.br/rh7p47q_954233"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new Event("open-upsell"));
+                  }}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-7 py-4 text-lg font-bold text-[color:var(--ink)] shadow-[0_10px_30px_-10px_rgba(245,196,81,0.5)] transition hover:brightness-110 md:w-auto"
                 >
                   <Sparkles className="h-5 w-5" /> Quero o Pack por R$27,00
@@ -809,8 +811,10 @@ function FinalCTA() {
         <div className="mt-8">
           <a
             href="https://pay.cakto.com.br/rh7p47q_954233"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event("open-upsell"));
+            }}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--success)] px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_rgba(34,150,90,0.6)] transition hover:brightness-110"
           >
             <Sparkles className="h-5 w-5" /> Acessar por R$27,00
